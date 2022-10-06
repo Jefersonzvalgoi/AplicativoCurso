@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:background="@drawable/background">
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/logo"
+            />
+
+        <View
+            android:id="@+id/containerComponentes"
+            android:layout_height="250dp"
+            style="@style/ConteinerComponentes"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo"
+        />
+
+        <EditText
+            android:id="@+id/campoEmail"
+            android:inputType="textEmailAddress"
+            android:hint="Email"
+            android:drawableRight="@drawable/ic_email"
+            app:layout_constraintStart_toStartOf="@+id/containerComponentes"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentes"
+            app:layout_constraintTop_toTopOf="@id/containerComponentes"
+            style="@style/CampoTexto"
+            />
+
+        <EditText
+            android:id="@+id/campoSenha"
+            android:hint="Senha"
+            android:inputType="textPassword"
+            android:drawableRight="@drawable/ic_olho"
+            app:layout_constraintStart_toStartOf="@+id/containerComponentes"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentes"
+            app:layout_constraintTop_toBottomOf="@id/campoEmail"
+            style="@style/CampoTexto"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btEntrar"
+            app:layout_constraintStart_toStartOf="@+id/containerComponentes"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentes"
+            app:layout_constraintTop_toBottomOf="@id/campoSenha"
+            style="@style/Botao"
+            android:text="@string/entrar"
+
+            />
+
+        <ProgressBar
+            android:id="@+id/barraProgresso"
+            android:visibility="invisible"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/containerComponentes"
+            android:layout_marginTop="20dp"
+            />
+
+        <TextView
+            android:id="@+id/texto_tela_cadastro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/texto_cadastro"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barraProgresso"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="30dp"
+
+            />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
+
+
+
+
+
+

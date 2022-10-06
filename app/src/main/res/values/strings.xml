@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Projeto Aplicativo</string>
+    <string name="entrar">Entrar</string>
+    <string name="texto_cadastro">Cadastre-se clicando aqui.</string>
+    <string name="titulo_cadastro">Cadastro</string>
+    <string name="bt_cadastro">Cadastrar</string>
+    <string name="titulo_usuarios">Lista de Usuários</string>
+    <string name="bt_sair">Sair</string>
+</resources>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillViewport="true">
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ListaUsuarios"
+    android:background="@drawable/background">
+
+    <TextView
+        android:id="@+id/titulo_usuarios"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/titulo_usuarios"
+        style="@style/Titulos"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+    />
+
+    <View
+        android:id="@+id/container_usuarios"
+        style="@style/ConteinerComponentes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titulo_usuarios"
+        android:layout_height="600dp"
+        />
+
+    <ScrollView
+        android:id="@+id/scroll_usuarios"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/container_usuarios"
+        app:layout_constraintStart_toStartOf="@id/container_usuarios"
+        app:layout_constraintEnd_toEndOf="@id/container_usuarios"
+        android:background="@color/black"/>
+
+
+
+   <androidx.appcompat.widget.AppCompatButton
+
+       style="@style/Botao"
+       app:layout_constraintStart_toStartOf="@id/container_usuarios"
+       app:layout_constraintEnd_toEndOf="@id/container_usuarios"
+       app:layout_constraintBottom_toBottomOf="@id/container_usuarios"
+       android:layout_marginBottom="20dp"
+       android:text="Excluir"
+       />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
